@@ -73,5 +73,111 @@ textarea{min-height:120px}
   color: #ffffff;
 }
 
-@media(max-width:900px){.menu{display:none}.hero-grid,.app-grid,.buy,.contact,.footer-grid{grid-template-columns:1fr}.three,.steps{grid-template-columns:1fr}.benefits{grid-template-columns:1fr 1fr}.section{padding:72px 0}.nav{height:72px}.brand img{height:46px}}
-@media(max-width:560px){.benefits,.buy-images{grid-template-columns:1fr}.wrap{padding:0 18px}h1{font-size:44px}}
+/* MENÚ DESPLEGABLE EMPRESA */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  border: 0;
+  background: transparent;
+  font-weight: 800;
+  color: #536174;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 0;
+}
+
+.dropdown-btn:hover {
+  color: var(--orange);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 34px;
+  right: 0;
+  min-width: 200px;
+  background: #ffffff;
+  border: 1px solid #e7eef6;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(20,33,61,.12);
+  padding: 10px;
+  z-index: 100;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: #536174;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background: #f4f9fd;
+  color: var(--orange);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* SECCIONES EMPRESA */
+
+.empresa-section {
+  scroll-margin-top: 100px;
+}
+
+.empresa-box {
+  max-width: 900px;
+}
+
+.empresa-box h2 {
+  margin-bottom: 20px;
+}
+
+.empresa-box p {
+  font-size: 18px;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 32px;
+}
+
+.valores-grid div {
+  background: #ffffff;
+  border: 1px solid #e7eef6;
+  border-radius: 26px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(20,33,61,.05);
+}
+
+.valores-grid h3 {
+  margin-top: 0;
+}
+
+@media(max-width:900px){
+  .menu{display:none}
+  .hero-grid,.app-grid,.buy,.contact,.footer-grid{grid-template-columns:1fr}
+  .three,.steps{grid-template-columns:1fr}
+  .benefits{grid-template-columns:1fr 1fr}
+  .section{padding:72px 0}
+  .nav{height:72px}
+  .brand img{height:46px}
+  .dropdown{display:none}
+  .valores-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:560px){
+  .benefits,.buy-images{grid-template-columns:1fr}
+  .wrap{padding:0 18px}
+  h1{font-size:44px}
+}
